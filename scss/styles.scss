@@ -1,0 +1,98 @@
+//Importacion
+@import "reseteo";
+@import "colores";
+@import "tipografias";
+@import "animaciones";
+@import "barraNav";
+@import "pieDePagina";
+
+$alto: 600px;
+
+/*Home*/
+#content{
+    background-color: #fdfdfd;
+    height: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.landtext{
+    text-align: center;
+    width: 500px;
+    align-self: center;
+}
+
+/*Blog*/
+article{
+    background-color: #fafafa;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+}
+
+.articleflex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/*Educacion*/
+#eduGrid{
+    height: 800px;
+    display: grid;
+    grid-template-areas: "head nav" "main main" "foot foot";
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 350px 350px 350px;
+    grid-column-gap: 20px;
+    justify-content: center;
+    div{
+        margin-top: 20px;
+    }
+    img{
+        height: 300px;
+    }
+}
+
+.a{ grid-area: head; }
+.b{ grid-area: nav; }
+.c{ grid-area: main; }
+.d{ grid-area: foot; }
+
+/*Eventos*/
+.livegrid{
+    height: 800px;
+    margin: 20px 0px;
+    display: grid;
+    grid-template-areas: 
+    "proxEvento evento1 evento2" 
+    "proxEvento evento3 evento4";
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 350px 350px;
+    grid-column-gap: 50px;
+    grid-row-gap: 60px;
+    justify-content: center;
+    img{
+        height: $alto/2;
+        width: 300px;
+    } 
+    div{
+        text-align: center;
+    }
+}
+
+.proxEvento{ grid-area: proxEvento;
+    img{
+        height: $alto;
+    }
+}
+.e1{ grid-area: evento1;}
+.e2{ grid-area: evento2;}
+.e3{ grid-area: evento3;}
+.e4{ grid-area: evento4;}
+
+/*Suscripcion*/
+.form{
+    width: 400px;
+}
